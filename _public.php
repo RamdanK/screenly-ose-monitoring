@@ -1,18 +1,8 @@
 <?php
 /*
-                            _
-   ____                    | |
-  / __ \__      _____  _ __| | __ ____
- / / _` \ \ /\ / / _ \| '__| |/ /|_  /
-| | (_| |\ V  V / (_) | |  |   <  / /
- \ \__,_| \_/\_/ \___/|_|  |_|\_\/___|
-  \____/
-
-        http://www.atworkz.de
-           info@atworkz.de
 _______________________________________
 
-       Screenly OSE Monitoring
+       Freebits Signage Monitoring
         Public Access Module
 _______________________________________
 */
@@ -197,10 +187,10 @@ else {
 echo '
     </div>
     <footer class="footer footer-transparent">
-      <div class="row text-center align-items-center flex-row-reverse">';
+      <div class="row text-center align-items-center justify-content-center flex-row-reverse">';
         echo'<div class="col-12 col-lg-auto mt-3 mt-lg-0 mr-5">';
           if(isset($pagination)) echo $pagination; echo '
-          &copy; '.date('Y').' by <a href="https://www.atworkz.de" target="_blank">atworkz.de</a>
+          &copy; '.date('Y').' by <a href="https://www.freebitswifi.com/" target="_blank">FreebitsWifi</a>
         </div>
       </div>
     </footer>

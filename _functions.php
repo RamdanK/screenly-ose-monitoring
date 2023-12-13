@@ -1,18 +1,8 @@
 <?php
 /*
-                            _
-   ____                    | |
-  / __ \__      _____  _ __| | __ ____
- / / _` \ \ /\ / / _ \| '__| |/ /|_  /
-| | (_| |\ V  V / (_) | |  |   <  / /
- \ \__,_| \_/\_/ \___/|_|  |_|\_\/___|
-  \____/
-
-        http://www.atworkz.de
-           info@atworkz.de
 _______________________________________
 
-       Screenly OSE Monitoring
+       Freebits Signage Monitoring
      Version 4.2  -  December 2021
 _______________________________________
 */
@@ -71,8 +61,8 @@ $runnerTime 		= getRunnerTime();
 $uploadMaxSize 	= $set['uploadMaxSize'];
 $_cryptKey 			= str_replace('.db', '', $db_cryproKey);
 
-if($set['name'] != 'SOMO'){
-	define('_SYSTEM_NAME', $set['name'].' - SOMO');
+if($set['name'] != 'Signage'){
+	define('_SYSTEM_NAME', $set['name'].' - Signage');
 }
 else define('_SYSTEM_NAME', $set['name']);
 

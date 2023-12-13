@@ -5,7 +5,7 @@
            info@labrus.com
 _______________________________________
 
-       Screenly OSE Monitoring
+       Freebits Signage Monitoring
         Translation file tr-TR
       Translated by Umit YAVUZ
 _______________________________________
@@ -223,8 +223,8 @@ return [
     'msg.module_not_exists' => 'Modül mevcut değil',
     'msg.new_token_generated' => 'Yeni token oluşturuldu!',
     'msg.no_data_collected' => 'Hiçbir veri toplanamadı.',
-    'msg.no_player_submitted' => 'Screenly OSE API algılanmadı!',
-    'msg.no_screenly_api' => 'Screenly OSE API bulunamadı!',
+    'msg.no_player_submitted' => 'Freebits Signage API algılanmadı!',
+    'msg.no_screenly_api' => 'Freebits Signage API bulunamadı!',
     'msg.no_valid_data' => 'Geçerli veri yok!',
     'msg.player_added_successfully' => '{name} başarıyla eklendi',
     'msg.player_delete_successfully' => 'Cihaz başarıyla silindi!',
@@ -331,15 +331,15 @@ return [
     'shown' => 'Shown',
     'skip' => 'Atla',
     'sqlite_version' => 'SQLite version',
-    'soma' => 'Screenly OSE Monitoring Add-ons',
+    'soma' => 'Freebits Signage Monitoring Add-ons',
     'soma_device_info' => 'SOMA Device Info',
     'soma.install' => 'Install SOMA',
-    'soma.manual_install_text1' => 'The Screenly OSE Monitoring add-on allows you to retrieve even more data from the Screenly player and process it in the monitor. <br />You have the possibility to get a "live" image of the player\'s output.<br /><br />To install, you have to log in to the respective Screenly player via SSH (How it works: <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/" target="_blank">here</a>) <br />and execute this command:<br />',
+    'soma.manual_install_text1' => 'The Freebits Signage Monitoring add-on allows you to retrieve even more data from the Screenly player and process it in the monitor. <br />You have the possibility to get a "live" image of the player\'s output.<br /><br />To install, you have to log in to the respective Screenly player via SSH (How it works: <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/" target="_blank">here</a>) <br />and execute this command:<br />',
     'soma.manual_install_text2' => 'After that the player restarts and the addon has been installed.',
     'soma.no_package_found' => 'No php-ssh2 package found! - Installation aborted!',
     'soma.start_installation' => 'Installation started - This may take a while...',
-    'somo' => 'Screenly OSE Monitoring',
-    'somo_name' => 'Screenly OSE Monitoring',
+    'somo' => 'Freebits Signage Monitoring',
+    'somo_name' => 'Freebits Signage Monitoring',
     'somo_settings' => 'SOMO settings',
     'ssh2_version' => 'ssh2 version',
     'start' => 'Start',
@@ -384,7 +384,7 @@ return [
     'wizard.all_settings_made' => 'Tüm ayarlar yapıldı.',
     'wizard.thank_you' => 'SOMO! indirdiğini ve kullandığınz için teşekkürler.',
     'wizard.welcome' => 'Yükleme sihirbazına hoş geldiniz.',
-    'wizard.you_can_start' => 'Artık Screenly OSE Monitoring ile başlayabilirsiniz',
+    'wizard.you_can_start' => 'Artık Freebits Signage Monitoring ile başlayabilirsiniz',
     'wrong_credentials' => 'Yanlış kimlik bilgileri',
     'you_need_help' => 'Yardıma mı ihtiyacınız var?',
 ];

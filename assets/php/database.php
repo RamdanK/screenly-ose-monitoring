@@ -12,7 +12,7 @@
            info@atworkz.de
 _______________________________________
 
-       Screenly OSE Monitoring
+       Freebits Signage Monitoring
           Database Module
 _______________________________________
 */
@@ -112,7 +112,7 @@ if(@file_exists('assets/data/version_old.txt')){
     $db->exec("ALTER TABLE `settings` RENAME TO `settings_tmp`");
     $db->exec("CREATE TABLE `settings` (`settingsID` INTEGER PRIMARY KEY AUTOINCREMENT,`duration`	INTEGER,	`token`	TEXT,	`name`	TEXT,	`end_date`	INTEGER, `firstStart`	INTEGER,	`updatecheck`	INTEGER)");
     $db->exec("INSERT INTO `settings`(duration,token,end_date,updatecheck) SELECT duration,token,end_date,updatecheck FROM `settings_tmp`");
-    $db->exec("UPDATE `settings` SET name='Screenly OSE Monitoring' WHERE settingsID=1");
+    $db->exec("UPDATE `settings` SET name='Freebits Signage Monitoring' WHERE settingsID=1");
     $db->exec("DROP TABLE `settings_tmp`");
   }
   if($oldVersion <= '4.0'){			// Update Database to Version 4.0

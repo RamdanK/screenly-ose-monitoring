@@ -2,15 +2,7 @@
 _VERSION=4.3
 
 cat << "EOF"
-                            _
-   ____                    | |
-  / __ \__      _____  _ __| | __ ____
- / / _` \ \ /\ / / _ \| '__| |/ /|_  /
-| | (_| |\ V  V / (_) | |  |   <  / /
- \ \__,_| \_/\_/ \___/|_|  |_|\_\/___|
-  \____/                www.atworkz.de
-
-        Screenly OSE Monitoring (SOMO)
+        Freebits Signage Monitoring
 EOF
 
 echo

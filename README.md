@@ -1,4 +1,4 @@
-# Screenly OSE Monitoring (SOMO)
+# Freebits Signage Monitoring (SOMO)
 <p align="center">
 <img width="800px" title="Manage Monitoring" alt="Manage Monitoring" src="https://raw.githubusercontent.com/didiatworkz/screenly-ose-monitor/master/.github/IMAGES/manage5.png" />
 </p>
@@ -22,9 +22,9 @@
 ## What is this?
 <img align="left" width="300px" title="Monitoring Overview" alt="Monitoring Overview" src="https://raw.githubusercontent.com/didiatworkz/screenly-ose-monitor/master/.github/IMAGES/manage4.png" style="padding-right: 12px; padding-bottom:12px" />
 
-Screenly OSE Monitoring is a web-based application that is simultaneously installed on a Screenly OSE Player or as standalone server solution.
+Freebits Signage Monitoring is a web-based application that is simultaneously installed on a Freebits Signage Player or as standalone server solution.
 
-With this tool, you can manage multiple Screenly OSE players in one web-interface.
+With this tool, you can manage multiple Freebits Signage players in one web-interface.
 
 In addition to its current display status, you can also manage the assets of a player. It is possible to activate or deactivate assets, add new ones, edit or simply delete them all from the player.
 Also it's possible to reboot the player directly or upload new assets to multiple players parallel.
@@ -69,7 +69,7 @@ No errors were found in the tests. If you find a problem or bug, please report i
 + Docker (will be installed)
 
 ## Installation
-__IMPORTANT: The monitoring was designed to run on the local network with the Screenly OSE Player. Problems or restrictions may occur if the server is hosted externally or accessed from an external network!__
+__IMPORTANT: The monitoring was designed to run on the local network with the Freebits Signage Player. Problems or restrictions may occur if the server is hosted externally or accessed from an external network!__
 
 Very simple installation:
 
@@ -84,7 +84,7 @@ bash <(curl -sL https://git.io/JttTW)
 ## Login
 After the installation is the default login:
 
-http://[ip-address]:9000 (when Screenly OSE is installed)<br />
+http://[ip-address]:9000 (when Freebits Signage is installed)<br />
 http://[ip-address] (Server installation)
 
 Username: demo<br />
@@ -103,7 +103,7 @@ From version 2.0 there are changes to the database structure which is prepared f
 
 But please note that the Add-on may have to be reinstalled on the players. (Current for all older versions before version 2.0)
 
-__IMPORTANT: If monitoring is installed on a Raspberry Pi that does not have a Screenly OSE Player (standalone installation) the port changes from 9000 to 80.
+__IMPORTANT: If monitoring is installed on a Raspberry Pi that does not have a Freebits Signage Player (standalone installation) the port changes from 9000 to 80.
 So the monitoring is accessible via the normal IP address!__
 
 ### Update SOMO

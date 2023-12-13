@@ -12,7 +12,7 @@
            info@atworkz.de
 _______________________________________
 
-       Screenly OSE Monitoring
+       Freebits Signage Monitoring
         Multi Uploader Module
 _______________________________________
 */

@@ -21,12 +21,12 @@ while [[ $# -gt 0 ]] ; do
          \ \__,_| \_/\_/ \___/|_|  |_|\_\/___|
           \____/                www.atworkz.de
 
-                Screenly OSE Monitoring (SOMO)
+                Freebits Signage Monitoring (SOMO)
 EOF
       tput sgr 0
       echo
-			echo "Screenly OSE Monitoring is a web-based application that is simultaneously"
-      echo "installed on a Screenly OSE Player or as standalone solution."
+			echo "Freebits Signage Monitoring is a web-based application that is simultaneously"
+      echo "installed on a Freebits Signage Player or as standalone solution."
 			echo "You can open the web-interface via the IP address \"$IP:$PORT\"."
       echo
 			echo "In addition, the monitoring offers an add-on that can be installed on other"
@@ -38,7 +38,7 @@ EOF
 			echo "  -r / --restart    | Restart the nginx services"
 			echo "  -c / --check      | Check all of all required files"
       echo "  --reset-db        | Reset system database"
-			echo "  -d / --uninstall  | Uninstall Screenly OSE Monitoring"
+			echo "  -d / --uninstall  | Uninstall Freebits Signage Monitoring"
       echo
       echo
             ;;
@@ -128,7 +128,7 @@ EOF
         echo
         echo
         echo
-			  echo -e "${ERROR}Uninstallation of Screenly OSE Monitoring ${NOCOLOR}"
+			  echo -e "${ERROR}Uninstallation of Freebits Signage Monitoring ${NOCOLOR}"
 			  echo -e "${ERROR}All data will be permanently removed! ${NOCOLOR}"
         echo
 			  read -p "Do you want to uninstall SOMO? [Y] (Y/n)" -n 1 -r -s UNINSTALL_BEGIN
@@ -159,7 +159,7 @@ EOF
           echo -e "[ \e[33mSOMO\e[39m ] Uninstallation complete..."
           echo
           echo
-          echo "Thank you for using Screenly OSE Monitoring (SOMO)"
+          echo "Thank you for using Freebits Signage Monitoring (SOMO)"
           echo "- didiatworkz"
           echo
           echo

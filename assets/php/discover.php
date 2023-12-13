@@ -11,7 +11,7 @@
     http://www.atworkz.de
        info@atworkz.de
 ________________________________________
-      Screenly OSE Monitor
+      Freebits Signage Monitor
        Discover Function
 ________________________________________
 */
@@ -104,13 +104,13 @@ Translation::setLocalesDir(__DIR__ . '/../locales');
     $nameIP = explode('.', $ip);
     $name = 'Player #'.$nameIP['3'];
 
-    if(strpos($output, 'Screenly OSE') !== false){
+    if(strpos($output, 'Freebits Signage') !== false){
       $res = preg_match("/<title>(.*)<\/title>/siU", $output, $result);
       if(!$res) return $name;
 
       $title = preg_replace('/\s+/', ' ', $result[1]);
       $title = trim($title);
-      $title = str_replace("Screenly OSE", "", $title);
+      $title = str_replace("Freebits Signage", "", $title);
       $name = str_replace(" - ", "", $title);
     }
     return $name;

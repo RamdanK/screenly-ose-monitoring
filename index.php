@@ -320,17 +320,17 @@ echo'
 		echo '
 		<footer class="footer footer-transparent">
 			<div class="container">
-				<div class="row text-center align-items-center flex-row-reverse">';
-				if(!(isset($_GET['monitoring']) OR !$loggedIn)) echo '
-					<div class="col-lg-auto ml-lg-auto">
-						<ul class="list-inline list-inline-dots mb-0">
-							<li class="list-inline-item"><a href="https://www.github.com/didiatworkz" target="_blank" class="link-secondary">Github</a></li>
-							<li class="list-inline-item"><a href="javascript:void(0)" data-toggle="modal" data-target="#info" class="link-secondary">'.Translation::of('information').'</a></li>
-							</ul>
-					</div>';
+				<div class="row text-center align-items-center justify-content-center flex-row-reverse">';
+				// if(!(isset($_GET['monitoring']) OR !$loggedIn)) echo '
+				// 	<div class="col-lg-auto ml-lg-auto">
+				// 		<ul class="list-inline list-inline-dots mb-0">
+				// 			<li class="list-inline-item"><a href="https://www.github.com/didiatworkz" target="_blank" class="link-secondary">Github</a></li>
+				// 			<li class="list-inline-item"><a href="javascript:void(0)" data-toggle="modal" data-target="#info" class="link-secondary">'.Translation::of('information').'</a></li>
+				// 			</ul>
+				// 	</div>';
 					echo'<div class="col-12 col-lg-auto mt-3 mt-lg-0">';
 						if(isset($pagination)) echo $pagination; echo '
-						&copy; '.date('Y').' by <a href="https://www.atworkz.de" target="_blank">atworkz.de</a>
+						&copy; '.date('Y').' by <a href="https://www.freebitswifi.com/" target="_blank">FreebitsWifi</a>
 					</div>
 				</div>
 			</div>

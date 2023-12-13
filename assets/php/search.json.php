@@ -12,7 +12,7 @@
            info@atworkz.de
 _______________________________________
 
-       Screenly OSE Monitoring
+       Freebits Signage Monitoring
              Search JSON
 _______________________________________
 */
@@ -134,7 +134,7 @@ array_push($output, $gen);
 $gen                 = array();
 $gen['title'] 		   = 'atWorkz';
 $gen['url'] 		     = 'index.php?somo_link';
-$gen['description']  = 'Creator of Screenly OSE Monitoring';
+$gen['description']  = 'Creator of Freebits Signage Monitoring';
 $gen['tokens'] 		   = 'creator copyright atworkz github somo soma script';
 array_push($output, $gen);
 

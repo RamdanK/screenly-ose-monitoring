@@ -1,6 +1,6 @@
 #!/bin/bash
 # Created by didiatworkz
-# Screenly OSE Monitoring
+# Freebits Signage Monitoring
 #
 # December 2021
 #_BRANCH=v4.3
@@ -18,15 +18,7 @@ header() {
 #clear
 tput setaf 172
 cat << "EOF"
-                            _
-   ____                    | |
-  / __ \__      _____  _ __| | __ ____
- / / _` \ \ /\ / / _ \| '__| |/ /|_  /
-| | (_| |\ V  V / (_) | |  |   <  / /
- \ \__,_| \_/\_/ \___/|_|  |_|\_\/___|
-  \____/                www.atworkz.de
-
-        Screenly OSE Monitoring (SOMO)
+        Freebits Signage Monitoring
 EOF
 tput sgr 0
 echo
@@ -37,7 +29,7 @@ echo
 header
 echo
 echo
-read -p "Do you want to install the Screenly OSE Monitoring? (y/N)" -n 1 -r -s INSTALL_BEGIN
+read -p "Do you want to install the Freebits Signage Monitoring? (y/N)" -n 1 -r -s INSTALL_BEGIN
 echo
 if [ "$INSTALL_BEGIN" != "y" ]
 then
@@ -125,10 +117,10 @@ if [ -f "$FILE" ]; then
     if command -v nginx &> /dev/null
     then
         echo -e "[ \e[33mSOMO\e[39m ] nginx installed!"
-        echo -e "[ \e[33mSOMO\e[39m ] Check if Screenly OSE installed..."
+        echo -e "[ \e[33mSOMO\e[39m ] Check if Freebits Signage installed..."
         FILE=/home/"$(whoami)"/screenly/server.py
         if [ -f "$FILE" ]; then  
-            echo -e "[ \e[33mSOMO\e[39m ] Screenly OSE installed!"
+            echo -e "[ \e[33mSOMO\e[39m ] Freebits Signage installed!"
             echo -e "[ \e[33mSOMO\e[39m ] Check if nginx needed anymore..."
             DOCK_IMAGE=$(docker images -q screenly/srly-ose-server)
             if [ -n "$DOCK_IMAGE" ]; then 
@@ -268,7 +260,7 @@ fi
 echo -e "[ \e[33mSOMO\e[39m ] Create and activate systemd service"
 cat <<EOT > /tmp/docker.somo.service
 [Unit]
-Description=Screenly OSE Monitoring Service
+Description=Freebits Signage Monitoring Service
 After=docker.service
 Wants=network-online.target docker.socket
 Requires=docker.socket
@@ -330,7 +322,7 @@ header
 echo -e "[ \e[33mSOMO\e[39m ] Installation finished!"
 echo
 echo
-echo -e "Screenly OSE Monitoring can be started from this address: \n\e[93mhttp://$IP$_PORT\e[39m"
+echo -e "Freebits Signage Monitoring can be started from this address: \n\e[93mhttp://$IP$_PORT\e[39m"
 echo
 echo -e "$_DEMOLOGIN"
 echo

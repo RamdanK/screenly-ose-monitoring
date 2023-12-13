@@ -12,7 +12,7 @@
            info@atworkz.de
 _______________________________________
 
-       Screenly OSE Monitoring
+       Freebits Signage Monitoring
         Translation file es-ES
       Translated by jcsanchezrb
 _______________________________________
@@ -230,8 +230,8 @@ return [
     'msg.module_not_exists' => 'El módulo no existe',
     'msg.new_token_generated' => '¡Nuevo token generado!',
     'msg.no_data_collected' => 'No se pudieron recopilar datos.',
-    'msg.no_player_submitted' => '¡No se detectó ninguna API de Screenly OSE!',
-    'msg.no_screenly_api' => '¡No se encontró ninguna API de Screenly OSE!',
+    'msg.no_player_submitted' => '¡No se detectó ninguna API de Freebits Signage!',
+    'msg.no_screenly_api' => '¡No se encontró ninguna API de Freebits Signage!',
     'msg.no_valid_data' => 'Ningún dato válido!',
     'msg.player_added_successfully' => '{name} añadido con éxito',
     'msg.player_delete_successfully' => '¡Reproductor eliminado con éxito!',
@@ -338,15 +338,15 @@ return [
     'shown' => 'Mostrado',
     'skip' => 'Salta',
     'sqlite_version' => 'Versión de SQLite',
-    'soma' => 'Complementos de Screenly OSE Monitoring',
+    'soma' => 'Complementos de Freebits Signage Monitoring',
     'soma_device_info' => 'Información del dispositivo SOMA',
     'soma.install' => 'Instalar SOMA',
-    'soma.manual_install_text1' => 'El complemento Screenly OSE Monitoring permite recuperar aún más datos del reproductor de Screenly y procesarlos en el monitor. <br /> Tiene la posibilidad de obtener una imagen "en vivo" de la salida del reproductor. <br /> <br /> Para instalar, debe iniciar sesión en el respectivo reproductor de Screenly a través de SSH (Cómo funciona : <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/" target="_blank"> aquí </a>) <br /> y ejecute este comando: <br />',
+    'soma.manual_install_text1' => 'El complemento Freebits Signage Monitoring permite recuperar aún más datos del reproductor de Screenly y procesarlos en el monitor. <br /> Tiene la posibilidad de obtener una imagen "en vivo" de la salida del reproductor. <br /> <br /> Para instalar, debe iniciar sesión en el respectivo reproductor de Screenly a través de SSH (Cómo funciona : <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/" target="_blank"> aquí </a>) <br /> y ejecute este comando: <br />',
     'soma.manual_install_text2' => 'Después de eso, el reproductor se reinicia y el complemento se ha instalado.',
     'soma.no_package_found' => '¡No se encontró el paquete php-ssh2! - ¡Instalación cancelada!',
     'soma.start_installation' => 'Instalación iniciada - Esto puede tardar un poco ...',
-    'somo' => 'Screenly OSE Monitoring',
-    'somo_name' => 'Screenly OSE Monitoring',
+    'somo' => 'Freebits Signage Monitoring',
+    'somo_name' => 'Freebits Signage Monitoring',
     'somo_settings' => 'Configuración de SOMO',
     'ssh2_version' => 'versión ssh2',
     'start' => 'Empezar',
@@ -391,7 +391,7 @@ return [
     'wizard.all_settings_made' => 'Se han realizado todos los ajustes.',
     'wizard.thank_you' => '¡Gracias por descargar y usar SOMO!',
     'wizard.welcome' => 'Bienvenido al asistente de instalación.',
-    'wizard.you_can_start' => 'Ahora puede comenzar con su Screenly OSE Monitoring',
+    'wizard.you_can_start' => 'Ahora puede comenzar con su Freebits Signage Monitoring',
     'wrong_credentials' => 'Credenciales erroneas',
     'you_need_help' => '¿Necesitas ayuda?',
 ];

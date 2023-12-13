@@ -36,8 +36,8 @@ Please search on the [issue tracker](https://github.com/didiatworkz/screenly-ose
 
 ## Your Environment
 <!--- Include as many relevant details about the environment you experienced the bug in -->
-* Screenly OSE Monitoring Version: <!-- v3.3 -->
-* Screenly OSE Version: <!-- Release v0.18.2 -->
+* Freebits Signage Monitoring Version: <!-- v3.3 -->
+* Freebits Signage Version: <!-- Release v0.18.2 -->
 * Raspbian Version: <!-- buster -->
 * Browser Name and version:
 * Operating System and version (desktop or mobile):

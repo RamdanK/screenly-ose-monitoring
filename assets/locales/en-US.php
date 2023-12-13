@@ -12,7 +12,7 @@
            info@atworkz.de
 _______________________________________
 
-       Screenly OSE Monitoring
+       Freebits Signage Monitoring
         Transltion file en-US
       Translated by didiatworkz
 _______________________________________
@@ -135,9 +135,9 @@ return [
     'end_time' => 'End time',
     'entries' => 'Entries',
     'enter_ip_range' => 'Enter the IP range',
-    'enter_player_ip' => 'Enter the IP address of the Screenly player',
+    'enter_player_ip' => 'Enter the IP address of the player',
     'enter_player_location' => 'Enter the player location',
-    'enter_player_name' => 'Enter the Screenly player name',
+    'enter_player_name' => 'Enter the player name',
     'enter_user_name' => 'Enter your username',
     'extensions' => 'Extensions',
     'familyname' => 'Family name',
@@ -230,8 +230,8 @@ return [
     'msg.module_not_exists' => 'Module not exists',
     'msg.new_token_generated' => 'New token generated!',
     'msg.no_data_collected' => 'No data could be collected.',
-    'msg.no_player_submitted' => 'No Screenly OSE API detected!',
-    'msg.no_screenly_api' => 'No Screenly OSE API found!',
+    'msg.no_player_submitted' => 'No Freebits Signage API detected!',
+    'msg.no_screenly_api' => 'No Freebits Signage API found!',
     'msg.no_valid_data' => 'No valid data!',
     'msg.player_added_successfully' => '{name} added successfully',
     'msg.player_delete_successfully' => 'Player successfully removed!',
@@ -318,7 +318,7 @@ return [
     'role' => 'Role',
     'save' => 'Save',
     'scanned_ips' => 'IP addresses scanned',
-    'screenly_api' => 'Screenly API',
+    'screenly_api' => 'Signage API',
     'screenshot' => 'Screenshot',
     'scripts' => 'Scripts',
     'search' => 'Search',
@@ -338,15 +338,15 @@ return [
     'shown' => 'Shown',
     'skip' => 'Skip',
     'sqlite_version' => 'SQLite version',
-    'soma' => 'Screenly OSE Monitoring Add-ons',
+    'soma' => 'Freebits Signage Monitoring Add-ons',
     'soma_device_info' => 'SOMA Device Info',
     'soma.install' => 'Install SOMA',
-    'soma.manual_install_text1' => 'The Screenly OSE Monitoring add-on allows you to retrieve even more data from the Screenly player and process it in the monitor. <br />You have the possibility to get a "live" image of the player\'s output.<br /><br />To install, you have to log in to the respective Screenly player via SSH (How it works: <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/" target="_blank">here</a>) <br />and execute this command:<br />',
+    'soma.manual_install_text1' => 'The Freebits Signage Monitoring add-on allows you to retrieve even more data from the Signage player and process it in the monitor. <br />You have the possibility to get a "live" image of the player\'s output.<br /><br />To install, you have to log in to the respective Signage player via SSH (How it works: <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/" target="_blank">here</a>) <br />and execute this command:<br />',
     'soma.manual_install_text2' => 'After that the player restarts and the addon has been installed.',
     'soma.no_package_found' => 'No php-ssh2 package found! - Installation aborted!',
     'soma.start_installation' => 'Installation started - This may take a while...',
-    'somo' => 'Screenly OSE Monitoring',
-    'somo_name' => 'Screenly OSE Monitoring',
+    'somo' => 'Freebits Signage Monitoring',
+    'somo_name' => 'Freebits Signage Monitoring',
     'somo_settings' => 'SOMO settings',
     'ssh2_version' => 'ssh2 version',
     'start' => 'Start',
@@ -391,7 +391,7 @@ return [
     'wizard.all_settings_made' => 'All settings have been made.',
     'wizard.thank_you' => 'Thank you for downloading and using SOMO!',
     'wizard.welcome' => 'Welcome to the installation wizard.',
-    'wizard.you_can_start' => 'You can now start with your Screenly OSE Monitoring',
+    'wizard.you_can_start' => 'You can now start with your Freebits Signage Monitoring',
     'wrong_credentials' => 'Wrong credentials',
     'you_need_help' => 'You need help?',
 ];
