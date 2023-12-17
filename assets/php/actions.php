@@ -24,10 +24,16 @@ require_once('translation.php');
 use Translation\Translation;
 Translation::setLocalesDir(__DIR__ . '/../locales');
 
+$uploadDir = __DIR__.'/../data/upload/images';
+
+if (!is_dir($uploadDir)) {
+	mkdir($uploadDir, 0777, true);
+}
+
 if(isset($_POST['newAsset'])){
 	$id 	 			= isset($_POST['id']) ? $_POST['id'] : array();
 	$now				= strtotime("-10 minutes");
-	//$id[] 			= isset($_POST['id']) ? $_POST['id'] : '';
+	// $id[] 			= isset($_POST['id']) ? $_POST['id'] : '';
 	$url 				= isset($_POST['url']) ? $_POST['url'] : '';
 	$name 			= isset($_POST['name']) ? $_POST['name'] : $_POST['url'];
 	$mimetype		= $_POST['mimetype'];
@@ -38,17 +44,32 @@ if(isset($_POST['newAsset'])){
 	$duration 	= isset($_POST['duration']) ? $_POST['duration'] : $set['duration'];
 	$active 		= isset($_POST['active']) ? 1 : 0;
 
+	$assetID = null;
 
 	if($name == '') $name = $url;
 
 	if(isset($_POST['multidrop'])){
+		// move file into upload directory
+		$fileName = time().'-'.$_FILES['file']['name'];
+		$uploadFileName = $uploadDir.'/'.$fileName;
+		if(file_exists($uploadFileName)) {
+			chmod($uploadFileName,0755); //Change the file permissions if allowed
+			unlink($uploadFileName); //remove the file
+		}
+		move_uploaded_file($_FILES['file']['tmp_name'], $uploadFileName);
+
+		$assetUrl = SITE_URL.'/assets/data/upload/images/'.$fileName;
+		// insert into asset
+		$db->exec("INSERT INTO assets (title, type, url) VALUES('".$fileName."', '".$mimetype."', '".$assetUrl."')");
+		$assetID = $db->lastInsertRowID();
+
 		$dzuuid							= isset($_POST['dzuuid']) ? $_POST['dzuuid'] : '';
 		$dzchunkindex				= isset($_POST['dzchunkindex']) ? $_POST['dzchunkindex'] : '';
 		$dztotalfilesize		= isset($_POST['dztotalfilesize']) ? $_POST['dztotalfilesize'] : '';
 		$dzchunksize				= isset($_POST['dzchunksize']) ? $_POST['dzchunksize'] : '';
 		$dztotalchunkcount 	= isset($_POST['dztotalchunkcount']) ? $_POST['dztotalchunkcount'] : '';
 		$dzchunkbyteoffset	= isset($_POST['dzchunkbyteoffset']) ? $_POST['dzchunkbyteoffset'] : '';
-		$image							= curl_file_create($_FILES['file']['tmp_name'],$_FILES['file']['type'],$_FILES['file']['name']);
+		$image							= curl_file_create($_FILES['file']['tmp_name'],$_FILES['file']['type'],$fileName);
 		$data3								= array(
 			'file_upload' 			=> $image,
 			'dzuuid' 						=> $dzuuid,
@@ -60,9 +81,11 @@ if(isset($_POST['newAsset'])){
 		);
 		$ids 			= $_POST['playerID'];
 		$id				= explode(',', $ids);
+	} else {
+		// insert into asset
+		$db->exec("INSERT INTO assets (title, type, url) VALUES('".$name."', '".$mimetype."', '".$url."')");
+		$assetID = $db->lastInsertRowID();
 	}
-
-
 
 	for ($i=0; $i < count($id); $i++) {
 		$output					= NULL;
@@ -75,6 +98,11 @@ if(isset($_POST['newAsset'])){
 
 		$assetLogName 	= strlen($name) > 35 ? substr($name,0,32)."..." : $name;
 		systemLog('Player', 'Upload asset: '.$assetLogName.' to player '.$playerName, $loginUserID, 1);
+
+		// Insert into asset_player
+		if ($playerID && $assetID) {
+			$db->exec(sprintf("INSERT INTO `asset_player` (`assetID`, `playerID`) VALUES('%s', '%s')", $assetID, $playerID));
+		}
 
 		if(isset($_POST['multidrop'])){
 			//print_r($images);
@@ -121,6 +149,11 @@ if(isset($_POST['newAsset'])){
 			$data['skip_asset_check'] = 1;
 			if($mimetype == 'video') $data['duration'] = '0';
 			else $data['duration'] = $duration;
+
+			// set status to 1 if data successfully uploaded
+			if ($assetID && $playerID) {
+				$db->exec(sprintf("UPDATE asset_player SET status='%s' WHERE assetID='%s' AND playerID='%s'", 1, $assetID, $playerID));
+			}
 
 			//print_r($data);
 			if($set['debug'] == 1) echo 'ID: '.$playerID.'<br />';

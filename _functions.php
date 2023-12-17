@@ -14,6 +14,7 @@ $_modules = array(
 		'dashboard',
 		'groupmanagement',
 		'multiuploader',
+		'assets',
 		'players',
 		'settings',
 		'usermanagement',
@@ -49,6 +50,8 @@ setcookie(session_name('somo_session'),session_id(),time()+$set['sessionTime'], 
 session_start();
 date_default_timezone_set($set['timezone']);
 
+define('SITE_URL', siteURL());
+
 include_once('assets/php/functions.php');
 include_once('assets/php/user.php');
 include_once('assets/php/curl.php');
@@ -56,6 +59,7 @@ include_once('assets/php/deviceInfo.php');
 include_once('assets/php/player.php');
 include_once('assets/php/update.php');
 include_once('assets/php/actions.php');
+include_once('assets/php/asset.php');
 
 $runnerTime 		= getRunnerTime();
 $uploadMaxSize 	= $set['uploadMaxSize'];
@@ -87,4 +91,11 @@ function encrypting($action, $string) {
       $output = openssl_decrypt(base64_decode($string), $encrypt_method, $key, 0, $iv);
   }
   return $output;
+}
+
+function siteURL()
+{
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+    $domainName = $_SERVER['HTTP_HOST'];
+    return $protocol.$domainName;
 }

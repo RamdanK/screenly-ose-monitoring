@@ -592,7 +592,7 @@ $("#assetNewForm").submit(function(e) {
 			error: function(data) {
 				$.notify({
 					icon: 'tim-icons icon-bell-55',
-					message: data
+					message: data.responseText
 				}, {
 					type: 'danger',
 					timer: 1000,
@@ -832,6 +832,31 @@ $('#addonLength_change').val(addon_table.page.len());
 
 $('#addonLength_change').change(function() {
 	addon_table.page.len($(this).val()).draw();
+});
+
+
+var assets_table = $('#assets_table').DataTable({
+	dom: 'tipr',
+	stateSave: false,
+	autoWidth: false,
+	order: [[3, 'desc']],
+	initComplete: (settings, json) => {
+		$('.dataTables_paginate').appendTo('#dataTables_paginate');
+		$('.dataTables_info').appendTo('#dataTables_info');
+	},
+	language: {
+		url: "assets/php/datatable_lang.json.php"
+	}
+});
+
+$('#assetsSearch').keyup(function() {
+	assets_table.search($(this).val()).draw();
+});
+
+$('#assetsLength_change').val(assets_table.page.len());
+
+$('#assetsLength_change').change(function() {
+	assets_table.page.len($(this).val()).draw();
 });
 
 $('.installAddon').on('click', function() {

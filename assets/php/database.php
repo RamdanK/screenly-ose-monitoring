@@ -72,7 +72,9 @@ if (!is_writable($dbase_file)) {
   }
 }
 
-
+// add asset database if not exists
+$db->exec("CREATE TABLE IF NOT EXISTS `assets` (`assetID` INTEGER PRIMARY KEY AUTOINCREMENT, `title` TEXT, `type` TEXT, `url` TEXT, `created` TEXT DEFAULT CURRENT_TIMESTAMP, `lastUpdated` INTEGER)");
+$db->exec("CREATE TABLE IF NOT EXISTS `asset_player` (`playerID` INTEGER, `assetID` INTEGER, `created` TEXT DEFAULT CURRENT_TIMESTAMP, `status` INTEGER DEFAULT 0, FOREIGN KEY (`playerID`) REFERENCES `player` (`playerID`) ON DELETE CASCADE ON UPDATE NO ACTION, FOREIGN KEY (`assetID`) REFERENCES `assets` (`assetID`) ON DELETE CASCADE ON UPDATE NO ACTION)");
 
 if(@file_exists('assets/data/version_old.txt')){
   $oldVersion = file_get_contents('assets/data/version_old.txt');
